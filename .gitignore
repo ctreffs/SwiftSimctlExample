@@ -10,8 +10,8 @@
 *.perspectivev3
 *.resolved
 *.xccheckout
-*.xcodeproj/*
 *.xcscmblueprint
+*/xcuserdata/*
 *.xcworkspace
 ._*
 .accio/
