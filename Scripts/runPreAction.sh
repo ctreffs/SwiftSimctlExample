@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # cleaning up hanging servers
-killall SimctlCLI 
+killall SimctlCLI
 
 # fail fast
 set -e
 
-${SRCROOT}/Scripts/SimctlCLI start-server > /dev/null 2>&1 &
+# start the server non-blocking from the checked out package
+${BUILD_ROOT}/../../SourcePackages/checkouts/SwiftSimctl/bin/SimctlCLI start-server > /dev/null 2>&1 &
