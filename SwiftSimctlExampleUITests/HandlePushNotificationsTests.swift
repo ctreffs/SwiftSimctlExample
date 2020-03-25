@@ -1,5 +1,5 @@
 //
-//  SwiftSimctlExampleUITests.swift
+//  HandlePushNotificationsTests.swift
 //  SwiftSimctlExampleUITests
 //
 //  Created by Christian Treffs on 19.03.20.
@@ -9,14 +9,7 @@
 import Simctl
 import XCTest
 
-let exampleAppBundleId = "com.example.SwiftSimctlExample"
-
-extension XCUIApplication {
-    static let exampleApp = XCUIApplication(bundleIdentifier: exampleAppBundleId)
-    static let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
-}
-
-class SwiftSimctlExampleUITests: XCTestCase {
+class HandlePushNotificationsTests: XCTestCase {
     lazy var simctl = SimctlClient(SimulatorEnvironment(bundleIdentifier: exampleAppBundleId,
                                                         host: .localhost(port: 8080))!)
 
@@ -86,7 +79,7 @@ class SwiftSimctlExampleUITests: XCTestCase {
         }
 
         let exp = expectation(description: "\(#function)")
-        simctl.requestPushNotification(.jsonPayload(data)) { result in
+        simctl.sendPushNotification(.jsonPayload(data)) { result in
             switch result {
             case .success:
                 exp.fulfill()
@@ -96,7 +89,7 @@ class SwiftSimctlExampleUITests: XCTestCase {
             }
         }
 
-        wait(for: [exp], timeout: 3.0)
+        wait(for: [exp], timeout: 5.0)
 
         // 2. tap received push notification
         let notification = XCUIApplication.springboard.otherElements["NotificationShortLookView"]
