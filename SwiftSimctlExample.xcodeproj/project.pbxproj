@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F830E0C4242BA5B900875D0A /* ChangeAppearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830E0C3242BA5B900875D0A /* ChangeAppearanceTests.swift */; };
+		F830E0C6242BA5E400875D0A /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830E0C5242BA5E400875D0A /* Shared.swift */; };
 		F851FF952423ADB20099A319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851FF942423ADB20099A319 /* AppDelegate.swift */; };
 		F851FF972423ADB20099A319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851FF962423ADB20099A319 /* SceneDelegate.swift */; };
 		F851FF992423ADB20099A319 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851FF982423ADB20099A319 /* ContentView.swift */; };
 		F851FF9B2423ADB30099A319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F851FF9A2423ADB30099A319 /* Assets.xcassets */; };
 		F851FF9E2423ADB30099A319 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F851FF9D2423ADB30099A319 /* Preview Assets.xcassets */; };
 		F851FFA12423ADB30099A319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F851FF9F2423ADB30099A319 /* LaunchScreen.storyboard */; };
-		F851FFB72423ADB30099A319 /* SwiftSimctlExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851FFB62423ADB30099A319 /* SwiftSimctlExampleUITests.swift */; };
+		F851FFB72423ADB30099A319 /* HandlePushNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851FFB62423ADB30099A319 /* HandlePushNotificationsTests.swift */; };
+		F8829B2A242BA8A500028F15 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = F8829B29242BA8A500028F15 /* SnapshotTesting */; };
 		F8FB3BAE2423BF9E000BB8CD /* Simctl in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = F8FB3BAD2423BF9E000BB8CD /* Simctl */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F830E0C3242BA5B900875D0A /* ChangeAppearanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAppearanceTests.swift; sourceTree = "<group>"; };
+		F830E0C5242BA5E400875D0A /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		F851FF912423ADB20099A319 /* SwiftSimctlExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSimctlExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F851FF942423ADB20099A319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F851FF962423ADB20099A319 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +42,7 @@
 		F851FFA02423ADB30099A319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F851FFA22423ADB30099A319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F851FFB22423ADB30099A319 /* SwiftSimctlExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSimctlExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F851FFB62423ADB30099A319 /* SwiftSimctlExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSimctlExampleUITests.swift; sourceTree = "<group>"; };
+		F851FFB62423ADB30099A319 /* HandlePushNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlePushNotificationsTests.swift; sourceTree = "<group>"; };
 		F851FFB82423ADB30099A319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8B7BC5F2428E1D900B3BD7D /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
 		F8FB3BA62423B4F5000BB8CD /* SwiftSimctlExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftSimctlExample.entitlements; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8FB3BAE2423BF9E000BB8CD /* Simctl in Frameworks */,
+				F8829B2A242BA8A500028F15 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				F851FFB82423ADB30099A319 /* Info.plist */,
-				F851FFB62423ADB30099A319 /* SwiftSimctlExampleUITests.swift */,
+				F830E0C5242BA5E400875D0A /* Shared.swift */,
+				F851FFB62423ADB30099A319 /* HandlePushNotificationsTests.swift */,
+				F830E0C3242BA5B900875D0A /* ChangeAppearanceTests.swift */,
 			);
 			path = SwiftSimctlExampleUITests;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			name = SwiftSimctlExampleUITests;
 			packageProductDependencies = (
 				F8FB3BAD2423BF9E000BB8CD /* Simctl */,
+				F8829B29242BA8A500028F15 /* SnapshotTesting */,
 			);
 			productName = SwiftSimctlExampleUITests;
 			productReference = F851FFB22423ADB30099A319 /* SwiftSimctlExampleUITests.xctest */;
@@ -194,6 +203,7 @@
 			mainGroup = F851FF882423ADB20099A319;
 			packageReferences = (
 				F8FB3BA72423BF80000BB8CD /* XCRemoteSwiftPackageReference "SwiftSimctl" */,
+				F8829B26242BA86200028F15 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = F851FF922423ADB20099A319 /* Products */;
 			projectDirPath = "";
@@ -240,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F851FFB72423ADB30099A319 /* SwiftSimctlExampleUITests.swift in Sources */,
+				F830E0C6242BA5E400875D0A /* Shared.swift in Sources */,
+				F851FFB72423ADB30099A319 /* HandlePushNotificationsTests.swift in Sources */,
+				F830E0C4242BA5B900875D0A /* ChangeAppearanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +509,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F8829B26242BA86200028F15 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.2;
+			};
+		};
 		F8FB3BA72423BF80000BB8CD /* XCRemoteSwiftPackageReference "SwiftSimctl" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ctreffs/SwiftSimctl.git";
@@ -508,6 +528,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F8829B29242BA8A500028F15 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8829B26242BA86200028F15 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
 		F8FB3BAD2423BF9E000BB8CD /* Simctl */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F8FB3BA72423BF80000BB8CD /* XCRemoteSwiftPackageReference "SwiftSimctl" */;
