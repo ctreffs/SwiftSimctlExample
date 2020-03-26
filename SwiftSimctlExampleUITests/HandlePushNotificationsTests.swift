@@ -14,6 +14,7 @@ class HandlePushNotificationsTests: XCTestCase {
                                                         host: .localhost(port: 8080))!)
 
     func testAllowPushNotifications() {
+        // MARK: Launch app and enable push notifications
         let app = XCUIApplication.exampleApp
         app.launch()
 
