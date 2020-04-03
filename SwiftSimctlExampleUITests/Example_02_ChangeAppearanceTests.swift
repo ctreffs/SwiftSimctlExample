@@ -1,5 +1,5 @@
 //
-//  ChangeAppearanceTests.swift
+//  Example_02_ChangeAppearanceTests.swift
 //  SwiftSimctlExampleUITests
 //
 //  Created by Christian Treffs on 25.03.20.
@@ -10,7 +10,7 @@ import Simctl
 import SnapshotTesting
 import XCTest
 
-class ChangeAppearanceTests: XCTestCase {
+class Example_02_ChangeAppearanceTests: XCTestCase {
     lazy var simctl = SimctlClient(SimulatorEnvironment(bundleIdentifier: exampleAppBundleId,
                                                         host: .localhost(port: 8080))!)
     // run on iPhone 11 Pro
