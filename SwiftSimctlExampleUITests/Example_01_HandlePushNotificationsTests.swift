@@ -1,5 +1,5 @@
 //
-//  HandlePushNotificationsTests.swift
+//  Example_01_HandlePushNotificationsTests.swift
 //  SwiftSimctlExampleUITests
 //
 //  Created by Christian Treffs on 19.03.20.
@@ -9,7 +9,7 @@
 import Simctl
 import XCTest
 
-class HandlePushNotificationsTests: XCTestCase {
+class Example_01_HandlePushNotificationsTests: XCTestCase {
     lazy var simctl = SimctlClient(SimulatorEnvironment(bundleIdentifier: exampleAppBundleId,
                                                         host: .localhost(port: 8080))!)
 
