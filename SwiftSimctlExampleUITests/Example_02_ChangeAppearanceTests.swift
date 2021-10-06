@@ -95,7 +95,7 @@ class Example_02_ChangeAppearanceTests: XCTestCase {
         _ = label.waitForExistence(timeout: 1.0)
         // we do have a comparsion problem here since the virtual home bar indicator is not under our control and changes appearance
         assertSnapshot(matching: app.screenshot().image,
-                       as: .image(precision: 0.6))
+                       as: .image)
 
         let expLight = expectation(description: "set_appearance_light")
         simctl.setDeviceAppearance(.light) {

@@ -19,7 +19,7 @@ class Example_01_HandlePushNotificationsTests: XCTestCase {
         app.launch()
 
         if app.buttons["Re-enable push authorization manually in settings"].exists {
-            XCTFail("Push notifcations are denied. Re-enable them manually.")
+            XCTFail("Push notifications are denied. Re-enable them manually.")
             return
         }
 
@@ -93,7 +93,7 @@ class Example_01_HandlePushNotificationsTests: XCTestCase {
         wait(for: [exp], timeout: 5.0)
 
         // 2. tap received push notification
-        let notification = XCUIApplication.springboard.otherElements["NotificationShortLookView"]
+        let notification = XCUIApplication.springboard.otherElements.containing(.any, identifier: "Notification").firstMatch // "NotificationShortLookView"
 
         guard notification.waitForExistence(timeout: 5.0) else {
             XCTFail("Did not receive push notification - did you allow push notifications?")

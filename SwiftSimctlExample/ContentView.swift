@@ -62,6 +62,8 @@ extension UNAuthorizationStatus: CustomStringConvertible {
             return "authorized"
         case .provisional:
             return "provisional"
+        case .ephemeral:
+            return "ephemeral"
         @unknown default:
             return "unknown"
         }
@@ -71,13 +73,12 @@ extension UNAuthorizationStatus: CustomStringConvertible {
         switch self {
         case .authorized:
             return .green
-
         case .notDetermined:
             return .gray
-
         case .denied:
             return .red
-
+        case .ephemeral:
+            return .blue
         case .provisional:
             return .yellow
         @unknown default:
