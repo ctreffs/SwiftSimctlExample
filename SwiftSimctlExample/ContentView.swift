@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var authorizationStatus: UNAuthorizationStatus = .notDetermined
+    @State private var deepLinkPath: String = "none"
 
     var body: some View {
         VStack {
@@ -25,8 +26,19 @@ struct ContentView: View {
             } else if authorizationStatus == .denied {
                 Button(action: { UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!) }) { Text("Re-enable push authorization manually in settings") }
             }
+            
+            Text("Deep link path:")
+                .fontWeight(.bold)
+                .padding(4)
+            Text(deepLinkPath)
+                .foregroundColor(deepLinkPath == "none" ? .gray : .blue)
+                .padding(20)
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in self.updateAuthorizationStatus() }
+        .onReceive(NotificationCenter.default.publisher(for: .deepLink)) { notification in
+            guard let deepLinkPath = notification.object as? String else { return }
+            self.deepLinkPath = deepLinkPath
+        }
         .onAppear(perform: { self.updateAuthorizationStatus() })
     }
 
