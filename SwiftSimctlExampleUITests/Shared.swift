@@ -6,9 +6,17 @@
 //  Copyright © 2020 Christian Treffs. All rights reserved.
 //
 
+import Simctl
 import XCTest
 
 let exampleAppBundleId = "com.example.SwiftSimctlExample"
+
+let simctl = SimctlClient(
+    SimulatorEnvironment(
+        bundleIdentifier: exampleAppBundleId,
+        host: .localhost(port: 8080)
+    )!
+)
 
 extension XCUIApplication {
     static let exampleApp = XCUIApplication(bundleIdentifier: exampleAppBundleId)

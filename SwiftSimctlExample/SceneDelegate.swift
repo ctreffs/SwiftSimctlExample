@@ -23,17 +23,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     
-    /// If the app is opened with a register url scheme, then this function will
-    /// filter urls whose scheme matches `com.example.SwiftSimctlExample`
-    /// and post the `.deepLink` notification with the object being the url host + path.
+    /// If the app is opened with a url using the registered scheme `swiftsimctlexample`
+    /// then ths code will post a deep link notification whose object is url host + path.
     ///
     /// Example:
-    /// - Opening `com.example.SwiftSimctlExample://foo/bar` broadcasts a
-    ///  Notification named `deepLink` with object "foo/bar"
+    /// - Opening `swiftsimctlexample://foo/bar` posts a Notification
+    ///   named `"deepLink"` with object `"foo/bar"`
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         if
             let url = URLContexts.first?.url,
-            url.scheme?.lowercased() == "com.example.swiftsimctlexample"
+            url.scheme?.lowercased() == "swiftsimctlexample"
         {
             let path = "\(url.host ?? "")\(url.path)"
             NotificationCenter.default.post(name: .deepLink, object: path)
