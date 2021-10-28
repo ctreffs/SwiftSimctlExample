@@ -29,6 +29,15 @@ class Example_03_OpenUrlTests: XCTestCase {
         }
 
         wait(for: [exp], timeout: 5.0)
+        
+        // First installs on fresh simulators will prompt to open registered urls.
+        // UIInterruptionMonitor doesn't intercept this dialog (as of iOS 15
+        // & Xcode 13) so we use Springboard to tap on the potential positive dialog
+        // button instead.
+        let openButton = XCUIApplication.springboard.buttons.element(boundBy: 1)
+        if openButton.waitForExistence(timeout: 2) {
+            openButton.tap()
+        }
 
         let deepLinkPathLabel = app.staticTexts["myDeepLink/display"]
         guard deepLinkPathLabel.waitForExistence(timeout: 5.0) else {
