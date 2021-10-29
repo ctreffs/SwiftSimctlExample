@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
-    
+
     /// If the app is opened with a url using the registered scheme `swiftsimctlexample`
     /// then this code will post a deep link notification whose object is url host + path.
     ///

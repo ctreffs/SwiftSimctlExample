@@ -15,9 +15,9 @@ class Example_03_OpenUrlTests: XCTestCase {
         app.launch()
 
         let exp = expectation(description: "\(#function)")
-        
+
         let deepLinkUrl = URL(string: "swiftsimctlexample://myDeepLink/display")!
-        
+
         simctl.openUrl(deepLinkUrl) { result in
             switch result {
             case .success:
@@ -29,7 +29,7 @@ class Example_03_OpenUrlTests: XCTestCase {
         }
 
         wait(for: [exp], timeout: 5.0)
-        
+
         // First installs on fresh simulators will prompt to open registered urls.
         // UIInterruptionMonitor doesn't intercept this dialog (as of iOS 15
         // & Xcode 13) so we use Springboard to tap on the potential positive dialog

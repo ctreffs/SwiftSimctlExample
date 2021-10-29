@@ -26,7 +26,7 @@ struct ContentView: View {
             } else if authorizationStatus == .denied {
                 Button(action: { UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!) }) { Text("Re-enable push authorization manually in settings") }
             }
-            
+
             Text("Deep link path:")
                 .fontWeight(.bold)
                 .padding(4)
@@ -85,12 +85,16 @@ extension UNAuthorizationStatus: CustomStringConvertible {
         switch self {
         case .authorized:
             return .green
+
         case .notDetermined:
             return .gray
+
         case .denied:
             return .red
+
         case .ephemeral:
             return .blue
+
         case .provisional:
             return .yellow
         @unknown default:
