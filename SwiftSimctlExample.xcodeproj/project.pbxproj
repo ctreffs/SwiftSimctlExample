@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3340A8692722117000C4CBA5 /* Example_03_OpenUrlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3340A8682722116F00C4CBA5 /* Example_03_OpenUrlTests.swift */; };
 		F830E0C4242BA5B900875D0A /* Example_02_ChangeAppearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830E0C3242BA5B900875D0A /* Example_02_ChangeAppearanceTests.swift */; };
 		F830E0C6242BA5E400875D0A /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830E0C5242BA5E400875D0A /* Shared.swift */; };
 		F851FF952423ADB20099A319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F851FF942423ADB20099A319 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3340A8682722116F00C4CBA5 /* Example_03_OpenUrlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example_03_OpenUrlTests.swift; sourceTree = "<group>"; };
 		F830E0C3242BA5B900875D0A /* Example_02_ChangeAppearanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_02_ChangeAppearanceTests.swift; sourceTree = "<group>"; };
 		F830E0C5242BA5E400875D0A /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		F851FF912423ADB20099A319 /* SwiftSimctlExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSimctlExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				F830E0C5242BA5E400875D0A /* Shared.swift */,
 				F851FFB62423ADB30099A319 /* Example_01_HandlePushNotificationsTests.swift */,
 				F830E0C3242BA5B900875D0A /* Example_02_ChangeAppearanceTests.swift */,
+				3340A8682722116F00C4CBA5 /* Example_03_OpenUrlTests.swift */,
 			);
 			path = SwiftSimctlExampleUITests;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F830E0C6242BA5E400875D0A /* Shared.swift in Sources */,
+				3340A8692722117000C4CBA5 /* Example_03_OpenUrlTests.swift in Sources */,
 				F851FFB72423ADB30099A319 /* Example_01_HandlePushNotificationsTests.swift in Sources */,
 				F830E0C4242BA5B900875D0A /* Example_02_ChangeAppearanceTests.swift in Sources */,
 			);
@@ -524,7 +528,7 @@
 			repositoryURL = "https://github.com/ctreffs/SwiftSimctl.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				minimumVersion = 0.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

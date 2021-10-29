@@ -11,8 +11,6 @@ import SnapshotTesting
 import XCTest
 
 class Example_02_ChangeAppearanceTests: XCTestCase {
-    lazy var simctl = SimctlClient(SimulatorEnvironment(bundleIdentifier: exampleAppBundleId,
-                                                        host: .localhost(port: 8080))!)
     // run on iPhone 11 Pro
     func testDifferentAppearances() throws {
         let app = XCUIApplication.exampleApp

@@ -22,4 +22,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
+
+    /// If the app is opened with a url using the registered scheme `swiftsimctlexample`
+    /// then this code will post a deep link notification whose object is url host + path.
+    ///
+    /// Example:
+    /// - Opening `swiftsimctlexample://foo/bar/baz` posts a Notification
+    ///   named `"deepLink"` with String object `"foo/bar/baz"`.
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if
+            let url = URLContexts.first?.url,
+            url.scheme?.lowercased() == "swiftsimctlexample"
+        {
+            let path = "\(url.host ?? "")\(url.path)"
+            NotificationCenter.default.post(name: .deepLink, object: path)
+        }
+    }
+}
+
+extension Notification.Name {
+    static let deepLink: Notification.Name = .init(rawValue: "deepLink")
 }

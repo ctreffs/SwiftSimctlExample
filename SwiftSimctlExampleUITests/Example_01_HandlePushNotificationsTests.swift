@@ -10,9 +10,6 @@ import Simctl
 import XCTest
 
 class Example_01_HandlePushNotificationsTests: XCTestCase {
-    lazy var simctl = SimctlClient(SimulatorEnvironment(bundleIdentifier: exampleAppBundleId,
-                                                        host: .localhost(port: 8080))!)
-
     func testAllowPushNotifications() {
         // MARK: Launch app and enable push notifications
         let app = XCUIApplication.exampleApp

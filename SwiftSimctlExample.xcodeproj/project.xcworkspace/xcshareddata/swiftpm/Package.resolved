@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/ctreffs/SwiftSimctl.git",
         "state": {
           "branch": null,
-          "revision": "967131171e494aeeeb98976999e09b86b714be6f",
-          "version": "0.3.0"
+          "revision": "3b6542059bedd9f1e4eb0c722d68a99e623486f5",
+          "version": "0.4.0"
         }
       }
     ]
